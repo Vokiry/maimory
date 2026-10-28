@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Custom Eye-Candy Glassmorphism & Scrollbars */
+.glass-panel {
+  background: rgba(30, 30, 46, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(69, 71, 90, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-subtle {
+  background: rgba(24, 24, 37, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(49, 50, 68, 0.4);
+}
+
+/* Custom Catppuccin Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #181825;
+}
+::-webkit-scrollbar-thumb {
+  background: #45475a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #585b70;
+}
+
+/* Pulse animation for live connection */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glow effects */
+.glow-mauve {
+  filter: drop-shadow(0 0 8px rgba(203, 166, 247, 0.5));
+}
+.glow-blue {
+  filter: drop-shadow(0 0 8px rgba(137, 180, 250, 0.5));
+}
